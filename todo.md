@@ -39,3 +39,14 @@
 - [x] Preparar para deploy (Vercel ou local)
 - [x] Criar README_ATTO.md com overview do projeto
 - [x] Documentar stack tecnológico e arquitetura
+
+## Fase 6: Integração Streamlit + FastAPI (Nova Estrutura)
+- [x] Remover Docker (Dockerfile, docker-compose, etc)
+- [x] Criar pasta streamlit_app/ com estrutura organizada
+- [x] Implementar backend_api.py (FastAPI robusto)
+- [x] Implementar main.py (Streamlit elegante)
+- [x] Criar run_streamlit.py (launcher unificado)
+- [x] Criar requirements-streamlit.txt
+- [x] Criar README_STREAMLIT.md
+- [x] Testar estrutura integrada
+- [x] Consolidar tudo em um único repositório

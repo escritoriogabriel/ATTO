@@ -1,0 +1,9 @@
+# ATTO Transcriber - Streamlit + FastAPI Requirements
+streamlit==1.32.2
+fastapi==0.109.0
+uvicorn==0.27.0
+python-multipart==0.0.6
+pydantic==2.5.3
+adm-zip==0.5.10
+requests==2.31.0
+python-dotenv==1.0.0
