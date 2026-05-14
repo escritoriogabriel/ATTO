@@ -22,11 +22,11 @@ services:
     networks:
       - atto-network
 
-  # Node.js Application
+  # Node.js Application (Development)
   app:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
     container_name: atto-app
     environment:
       NODE_ENV: development
