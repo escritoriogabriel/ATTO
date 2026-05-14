@@ -1,6 +1,6 @@
-import { eq } from "drizzle-orm";
+import { eq, and, desc } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users } from "../drizzle/schema";
+import { InsertUser, users, transcriptionJobs, audioFiles, InsertTranscriptionJob, InsertAudioFile } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -89,4 +89,51 @@ export async function getUserByOpenId(openId: string) {
   return result.length > 0 ? result[0] : undefined;
 }
 
-// TODO: add feature queries here as your schema grows.
+// Transcription job helpers
+export async function createTranscriptionJob(job: InsertTranscriptionJob) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const result = await db.insert(transcriptionJobs).values(job);
+  return result[0];
+}
+
+export async function getTranscriptionJob(jobId: number) {
+  const db = await getDb();
+  if (!db) return undefined;
+  const result = await db.select().from(transcriptionJobs).where(eq(transcriptionJobs.id, jobId)).limit(1);
+  return result.length > 0 ? result[0] : undefined;
+}
+
+export async function getUserTranscriptionJobs(userId: number) {
+  const db = await getDb();
+  if (!db) return [];
+  return db.select().from(transcriptionJobs)
+    .where(eq(transcriptionJobs.userId, userId))
+    .orderBy(desc(transcriptionJobs.createdAt));
+}
+
+export async function updateTranscriptionJob(jobId: number, updates: Partial<InsertTranscriptionJob>) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  return db.update(transcriptionJobs).set(updates).where(eq(transcriptionJobs.id, jobId));
+}
+
+// Audio file helpers
+export async function createAudioFile(audioFile: InsertAudioFile) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const result = await db.insert(audioFiles).values(audioFile);
+  return result[0];
+}
+
+export async function getJobAudioFiles(jobId: number) {
+  const db = await getDb();
+  if (!db) return [];
+  return db.select().from(audioFiles).where(eq(audioFiles.jobId, jobId));
+}
+
+export async function updateAudioFile(audioFileId: number, updates: Partial<InsertAudioFile>) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  return db.update(audioFiles).set(updates).where(eq(audioFiles.id, audioFileId));
+}
