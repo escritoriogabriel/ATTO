@@ -1,0 +1,43 @@
+{
+  "build_command": "pnpm run build",
+  "capabilities": [
+    "server",
+    "db",
+    "user"
+  ],
+  "dev_command": "pnpm run dev",
+  "env_vars": {
+    "DATABASE_URL": "mysql://2EEhtPeQcnBY7EH.root:190w8hLhjOrT3ZCFlq2A@gateway06.us-east-1.prod.aws.tidbcloud.com:4000/ncB6qehBuLWtLHtK4FpeMp?ssl={\"rejectUnauthorized\":true}"
+  },
+  "experiments": [
+    "no_db_push"
+  ],
+  "git_remote": {
+    "repo_url": "s3://vida-prod-gitrepo/webdev-git/310519663631244418/ncB6qehBuLWtLHtK4FpeMp",
+    "access_key_id": "ASIAZV3A2ECZJJMIMCRD",
+    "secret_access_key": "5xjCjLqFuUvmhwJbBdFf6CRzjsW21OwfXKD76Oh5",
+    "session_token": "IQoJb3JpZ2luX2VjEJ3//////////wEaCXVzLWVhc3QtMSJGMEQCIBP5uSEvAIFDZfJZ69CGzyxCfOgldytJOTMAlGbpc46jAiAwum9qfSe0v8/qGAYH7wvZcwyqXfKNT03X3Ipeb6uI7yr2AwhmEAQaDDY2NTM4NjA5ODg2NiIMANvDiquz7uOGDF1XKtMDRnlAx4l9JISUHj2c83AWxieXBDAKnP1V8wzTRL2cZ1Sj97rmytZ0NGtAZ5yMDNkibixmSVemUtU1w8NpypHFNZx6p4UlrArfjRSI8bUl+suKqYdjgcBAC5RGYKzuV+6Xr/G3+qSt3iqi6Zt+7fmlT7GJLHzQv+TSOYRR4bMwAfxo82FMYVcQy6nApH44COaagUpegs3eOjnWDEc5MwiMGJMqFowbqv+wpwGjMqrRm4tHVA/SGxBokgH5IW8bqBgL8nLmPGRAvFkQ1nyMYMhsxGv1f85Zi3P1ddEd13g2BBd4DLcz90pSqP1r6CuWuKDDALflTBF6j5E+UTHL5ZDH4A+J2Ceb3n9cxY8WqDWHTjcQKluQYBFVETHR+LPgjES95SIMzwTtnmoMixXnn+RRiq0VxX6GzYbFbiYe34lmp/D0yDXEGrUQTV1sjzwwAi/eWHYrfUNAxxYsXK2fzZ8vwthkaFJ0XCRuVMm0Q3xBiXYqAIgUJJ0jBFbyvxf7xZbG9ZIep9SDSTWRzsQp9N6bNhH+md2Ti22jfg1NdGWvoH4gnYyTHUa9pbInWczizH+wWbccKv3YLjANrfFLFE5U8wEMRcCu6QaMTxHBcAfY9pC8SlgwoeWY0AY6ngHoGwllu4132m2qYb8kc+5q4FXtNXRFTlnXs/QtBqcn/fbj4n/gDWIvzqlaZEHH+o4C/VTd1Vksm5RnS0xG5iENpSJBqiZRDyMsu/r6ALQgkDPcPmftY3JuJLScg+LOhs0fYgtiIjzZW14u++wzCdxTBvJTOdL8/ORPEuBHY8rOBHJa4PUjW2XIUkxMlvF1QDV4BOCebsVtSRm18848dQ==",
+    "expiration": "2026-05-15T08:37:53.000Z"
+  },
+  "name": "Atto_App_New",
+  "path": "/home/ubuntu/Atto_App_New",
+  "port": 3000,
+  "secrets": {
+    "BUILT_IN_FORGE_API_KEY": "UfuotJAoepPiUdPikNHBus",
+    "BUILT_IN_FORGE_API_URL": "https://forge.manus.ai",
+    "JWT_SECRET": "UBiXf2DQrVwhfMQoiqLQKS",
+    "OAUTH_SERVER_URL": "https://api.manus.im",
+    "OWNER_NAME": "AdsEscritório",
+    "OWNER_OPEN_ID": "3HoZurn5t4JFdX7J7L3d5C",
+    "VITE_ANALYTICS_ENDPOINT": "https://manus-analytics.com",
+    "VITE_ANALYTICS_WEBSITE_ID": "da4166da-b10d-472b-bacf-06f90757812f",
+    "VITE_APP_ID": "ncB6qehBuLWtLHtK4FpeMp",
+    "VITE_APP_LOGO": "https://files.manuscdn.com/user_upload_by_module/web_dev_logo/310519663631244418/iHNtyTLTfzQhStTS.png",
+    "VITE_APP_TITLE": "ATTO - Multi-App Hub",
+    "VITE_FRONTEND_FORGE_API_KEY": "npuy8YAB2FB5UR3yoAGo5k",
+    "VITE_FRONTEND_FORGE_API_URL": "https://forge.manus.ai",
+    "VITE_OAUTH_PORTAL_URL": "https://manus.im"
+  },
+  "template_id": "web-db-user",
+  "test_command": "pnpm test"
+}
