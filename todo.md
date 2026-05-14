@@ -34,6 +34,8 @@
 - [x] Todos os testes passando (9 testes)
 
 ## Fase 5: Deploy
-- [ ] Criar checkpoint final
-- [ ] Documentar instruções de uso
-- [ ] Preparar para deploy (Vercel ou local)
+- [x] Criar checkpoint final (v1.0 - 45129954)
+- [x] Documentar instruções de uso (TRANSCRIBER_GUIDE.md)
+- [x] Preparar para deploy (Vercel ou local)
+- [x] Criar README_ATTO.md com overview do projeto
+- [x] Documentar stack tecnológico e arquitetura
